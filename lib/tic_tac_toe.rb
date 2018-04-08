@@ -63,6 +63,9 @@ def turn_count(board)
   return counter
 end
 
+def current_player(board)
+  turn_count(board) % 2 != 0 ? "O" : "X"
+end
 
 def won?(board)
   WIN_COMBINATIONS.select do |combo|
