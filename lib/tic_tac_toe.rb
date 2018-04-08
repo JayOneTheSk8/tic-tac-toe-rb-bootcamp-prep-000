@@ -55,6 +55,17 @@ def turn(board)
   end
 end
 
+def turn(board)
+  puts "Please enter 1-9:"
+  until valid_move == true
+    input = gets.chomp
+    x = input_to_index(input)
+    valid_move?(board, x)
+  end
+  move(board, x, current_player(board))
+  display_board(board)
+end
+
 def turn_count(board)
   counter = 0
   board.each do |space|
