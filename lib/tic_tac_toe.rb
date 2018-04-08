@@ -46,13 +46,12 @@ def turn(board)
   puts "Please enter 1-9:"
   while x = input_to_index(gets)
     if valid_move?(board, x) == true
-      break
+      move(board, x, token)
+      display_board(board)
     else
       false
     end
   end
-  move(board, x, token)
-  display_board(board)
 end
 
 def turn_count(board)
