@@ -42,19 +42,14 @@ def valid_move?(board, index)
   end
 end
 
-def current_player(board)
-  turn_count(board) % 2 != 0 ? "O" : "X"
-end
-
 def turn(board)
   puts "Please enter 1-9:"
-  while x = input_to_index(gets)
-    if valid_move?(board, x) == true
-      move(board, x, current_player(board))
-      display_board(board)
-    else
-      false
-    end
+  x = input_to_index(gets)
+  if valid_move?(board, x) == true
+    move(board, x, current_player(board))
+    display_board(board)
+  else
+    false
   end
 end
 
