@@ -51,7 +51,7 @@ def turn(board)
       false
     end
   end
-  move(board, x)
+  move(board, x, token)
   display_board(board)
 end
 
