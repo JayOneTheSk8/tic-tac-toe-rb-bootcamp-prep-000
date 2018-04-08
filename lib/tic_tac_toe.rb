@@ -42,22 +42,22 @@ def valid_move?(board, index)
   end
 end
 
-def turn(board)
-  puts "Please enter 1-9:"
-  while input = gets.chomp
-    x = input_to_index(input)
-    if valid_move?(board, x) == true
-      move(board, x, current_player(board))
-      display_board(board)
-    else
-      false
-    end
-  end
-end
+# def turn(board)
+#   puts "Please enter 1-9:"
+#   while input = gets.chomp
+#     x = input_to_index(input)
+#     if valid_move?(board, x) == true
+#       move(board, x, current_player(board))
+#       display_board(board)
+#     else
+#       false
+#     end
+#   end
+# end
 
 def turn(board)
   puts "Please enter 1-9:"
-  until valid_move == true
+  until valid_move? == true
     input = gets.chomp
     x = input_to_index(input)
     valid_move?(board, x)
