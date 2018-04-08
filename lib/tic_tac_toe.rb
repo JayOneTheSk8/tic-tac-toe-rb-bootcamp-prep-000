@@ -132,6 +132,6 @@ def play
   end
 
   if won?(board)
-    
+
   end
 end
