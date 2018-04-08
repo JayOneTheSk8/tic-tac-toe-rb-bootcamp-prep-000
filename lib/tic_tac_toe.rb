@@ -127,11 +127,11 @@ def winner(board)
 end
 
 def play
-  while !over?(board)
+  until over?(board)
     turn(board)
   end
 
   if won?(board)
-
+    print "Congratulations #{winner(board)}!"
   end
 end
