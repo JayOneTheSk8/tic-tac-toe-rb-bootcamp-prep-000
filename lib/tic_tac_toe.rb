@@ -51,7 +51,6 @@ def turn(board)
       false
     end
   end
-  token = gets.strip
   move(board, x, token)
   display_board(board)
 end
