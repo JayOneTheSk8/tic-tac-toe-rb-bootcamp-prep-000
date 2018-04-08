@@ -42,6 +42,10 @@ def valid_move?(board, index)
   end
 end
 
+def current_player(board)
+  turn_count(board) % 2 != 0 ? "O" : "X"
+end
+
 def turn(board)
   puts "Please enter 1-9:"
   while x = input_to_index(gets)
@@ -64,9 +68,6 @@ def turn_count(board)
   return counter
 end
 
-def current_player(board)
-  turn_count(board) % 2 != 0 ? "O" : "X"
-end
 
 def won?(board)
   WIN_COMBINATIONS.select do |combo|
